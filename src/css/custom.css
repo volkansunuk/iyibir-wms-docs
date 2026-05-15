@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ── Marka renkleri ── */
+:root {
+  --ifm-color-primary: #512BD4;
+  --ifm-color-primary-dark: #4526b8;
+  --ifm-color-primary-darker: #3f22ad;
+  --ifm-color-primary-darkest: #341b8e;
+  --ifm-color-primary-light: #6340d8;
+  --ifm-color-primary-lighter: #6f4fda;
+  --ifm-color-primary-lightest: #8c70e2;
+
+  --ifm-font-family-base: 'Poppins', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  --ifm-font-size-base: 15px;
+  --ifm-line-height-base: 1.7;
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(81, 43, 212, 0.08);
+
+  /* Sidebar */
+  --ifm-sidebar-width: 280px;
+  --ifm-menu-color-active: #512BD4;
+  --ifm-menu-color-background-active: rgba(81, 43, 212, 0.08);
+  --ifm-menu-color-background-hover: rgba(81, 43, 212, 0.05);
+
+  /* Navbar */
+  --ifm-navbar-height: 60px;
+  --ifm-navbar-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #7B6CF0;
+  --ifm-color-primary-dark: #6555ed;
+  --ifm-color-primary-darker: #5a49eb;
+  --ifm-color-primary-darkest: #3a27e6;
+  --ifm-color-primary-light: #9183f3;
+  --ifm-color-primary-lighter: #9c8ff4;
+  --ifm-color-primary-lightest: #bdb3f8;
+
+  --ifm-background-color: #0d0d16;
+  --ifm-background-surface-color: #13131f;
+  --ifm-navbar-background-color: #13131f;
+  --ifm-footer-background-color: #0a0a12;
+
+  --docusaurus-highlighted-code-line-bg: rgba(123, 108, 240, 0.12);
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; border-bottom: 1px solid var(--ifm-color-emphasis-200); padding-bottom: 0.4rem; }
+h3 { font-size: 1.2rem; }
+
+/* ── Navbar ── */
+.navbar__brand .navbar__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  background: linear-gradient(135deg, #512BD4, #2563EB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar__logo {
+  width: 28px;
+  height: 28px;
+}
+
+/* ── Sidebar ── */
+.menu__link--active {
+  font-weight: 600;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+.menu__caret::before {
+  transition: transform 0.2s ease;
+}
+
+/* ── Admonitions (tip/warning/info) ── */
+.alert--info {
+  --ifm-alert-background-color: rgba(81, 43, 212, 0.06);
+  --ifm-alert-border-color: rgba(81, 43, 212, 0.4);
+  --ifm-alert-color: var(--ifm-font-color-base);
+}
+
+/* ── Operasyon renk badge'leri ── */
+.badge--mal-kabul  { background: #4F46E5; color: white; }
+.badge--malzeme    { background: #2563EB; color: white; }
+.badge--sevkiyat   { background: #16A34A; color: white; }
+.badge--sayim      { background: #D97706; color: white; }
+.badge--uretim     { background: #7C3AED; color: white; }
+.badge--fason      { background: #0891B2; color: white; }
+.badge--talep      { background: #E11D48; color: white; }
+
+/* ── Code blocks ── */
+.prism-code {
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+/* ── Doc article ── */
+.markdown {
+  max-width: 760px;
+}
+
+.markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+/* ── Footer ── */
+.footer {
+  font-size: 0.88rem;
+}
+
+.footer__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
