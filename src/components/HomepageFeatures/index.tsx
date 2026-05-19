@@ -7,12 +7,14 @@ type FeatureItem = {
   emoji: string;
   title: string;
   description: ReactNode;
+  link: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     emoji: '🚀',
     title: 'Hızlı Kurulum',
+    link: '/docs/kurulum',
     description: (
       <>
         Windows Server veya Linux üzerinde Docker ile dakikalar içinde devreye alın.
@@ -23,6 +25,7 @@ const FeatureList: FeatureItem[] = [
   {
     emoji: '📦',
     title: 'Operasyon Kılavuzları',
+    link: '/docs/operasyonlar',
     description: (
       <>
         Mal kabul, sevkiyat, sayım, üretim, fason ve talep operasyonlarının
@@ -33,6 +36,7 @@ const FeatureList: FeatureItem[] = [
   {
     emoji: '🤖',
     title: 'AI Agent Kullanımı',
+    link: '/docs/ai-agentler',
     description: (
       <>
         Yapay zeka asistanını nasıl kullanacağınızı, hangi soruları sorabileceğinizi
@@ -42,16 +46,16 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({emoji, title, description}: FeatureItem) {
+function Feature({emoji, title, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center" style={{fontSize: '4rem', lineHeight: 1, marginBottom: '1rem'}}>
-        {emoji}
-      </div>
-      <div className="text--center padding-horiz--md">
+      <a href={link} className={styles.featureCard} style={{display: 'block', textDecoration: 'none', color: 'inherit'}}>
+        <div className={styles.featureEmoji}>{emoji}</div>
         <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+        <p style={{color: 'var(--ifm-font-color-secondary)', fontSize: '0.92rem', lineHeight: 1.65, marginBottom: 0}}>
+          {description}
+        </p>
+      </a>
     </div>
   );
 }
