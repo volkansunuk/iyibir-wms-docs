@@ -7,7 +7,7 @@
 
 .featureCard {
   background: var(--ifm-background-surface-color);
-  border: 1px solid rgba(81, 43, 212, 0.18);
+  border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 12px;
   padding: 2rem 1.5rem;
   height: 100%;
@@ -16,8 +16,16 @@
 }
 
 .featureCard:hover {
-  border-color: rgba(81, 43, 212, 0.45);
-  box-shadow: 0 4px 24px rgba(81, 43, 212, 0.08);
+  border-color: var(--ifm-color-primary-light);
+  box-shadow: 0 4px 24px rgba(81, 43, 212, 0.1);
+}
+
+[data-theme='dark'] .featureCard {
+  border-color: rgba(81, 43, 212, 0.2);
+}
+
+[data-theme='dark'] .featureCard:hover {
+  border-color: rgba(81, 43, 212, 0.5);
 }
 
 .featureEmoji {
